@@ -1,0 +1,232 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap');
+
+:root {
+  --text-font : 'Oxygen', sans-serif;
+  --title-font : 'Oxygen Mono', monospace;
+}
+
+body {
+  background-color: #d6e0e2;
+  margin: 0;
+  padding: 0;
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(189deg, rgba(87,7,97,1) 0%, rgba(241,0,50,1) 100%);
+  margin: 0 auto;
+}
+h1,h2 {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  color: rgb(58, 55, 55);
+  font-family: var(--text-font);
+  font-size: 120%;
+  font-weight: 600;
+  padding: 1rem;
+  font-family: var(--text-font);
+  
+  & * {
+    margin: 0.3rem;
+  }
+}
+
+nav h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+nav h1 svg {
+  width: 10%;
+  border-radius: 50%;
+}
+
+nav li:first-child {
+  flex-basis: 100%; /* take up all available space */
+  text-align: center;
+  font-family: var(--title-font);
+  display: flex;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: black ;
+  text-decoration: none;
+  display: block;
+  transition: all 0.1s ease-in-out;
+  color: rgb(139, 13, 97);
+}  
+
+nav a:hover {
+  color: rgb(7, 195, 241) ;
+}
+
+@media (min-width: 1000px) {
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+
+}
+
+.maps .con {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.maps .con > div section {
+  background-color: rgba(231, 229, 228, 0.39);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 1rem auto;
+}
+
+.maps .con > div section h2 {
+  font-family: var(--title-font);
+  color: #630343;
+}
+
+.maps .con > div section p {
+  font-family: var(--text-font);
+  color: #000000;
+}
+
+.maps .con > div img {
+  width: 100%;
+  object-fit: cover;
+  border-top : 2px solid #630343;
+  border-left: 2px solid #630343;
+  border-radius: 10px;
+}
+
+@media (min-width: 850px) {
+
+  .maps .con {
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .maps .con div{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .con > div > img {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    order: 1;
+  }
+  .con > div > section {
+    grid-column: 5 / 11;
+    grid-row: 1 / 2;
+    order: 2;
+  }
+
+  .con > div:nth-child(2) > img {
+    grid-column: 6 / 11;
+    grid-row: 1 / 2;
+    order: 1;
+  }
+
+  .con > div:nth-child(2) > section {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    order: 2;
+  }
+}
+
+.footer {
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center ;
+  text-align: center;
+}
+
+.footer > .con h2 {
+  font-family: var(--title-font);
+  margin: 0;
+  color: #5f0458;
+  cursor: default;
+}
+
+.footer > .con > .social-medias {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer > .con > .social-medias > a {
+  color: #000000;
+  font-size: 200%;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.footer > .con > .social-medias > a:nth-child(1):hover {
+  color: #3b5998;
+}
+
+.footer > .con > .social-medias > a:nth-child(2):hover {
+  color: #55acee;
+}
+
+.footer > .con > .social-medias > a:nth-child(3):hover {
+  color: #f78400;
+}
+
+.footer > .con > .social-medias > a:nth-child(4):hover {
+  color: #061df0;
+}
+
+.footer > .con > small {
+  font-size: 100% ;
+  font-family: var(--text-font);
+  color: #000000;
+  margin: 0;
+  cursor: default;
+}
+
+.footer > .con > small > a {
+  margin: 0 0.5rem;
+  color: #470666;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 150%;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    color: #000000;
+  }
+}

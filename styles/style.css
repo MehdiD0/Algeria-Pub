@@ -1,0 +1,287 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap');
+
+:root {
+  --text-font : 'Oxygen', sans-serif;
+  --title-font : 'Oxygen Mono', monospace;
+}
+
+body {
+  background-image: url(https://wallpapercrafter.com/desktop1/605665-Africa-Algeria-animals-Desert-Fennec-Fox-landscapes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: rgb(0, 0, 0) ;
+  margin: 0 auto;
+}
+
+nav {
+  color: rgb(58, 55, 55);
+  font-family: var(--text-font);
+  font-size: 120%;
+  font-weight: 600;
+  padding: 1rem;
+  font-family: var(--text-font);
+  
+  & * {
+    margin: 0.3rem;
+  }
+}
+
+nav h1 {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+nav h1 svg {
+  width: 10%;
+  border-radius: 50%;
+}
+
+nav li:first-child {
+  flex-basis: 100%; /* take up all available space */
+  text-align: center;
+  font-family: var(--title-font);
+  display: flex;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: black ;
+  text-decoration: none;
+  display: block;
+  transition: all 0.1s ease-in-out;
+  color: green;
+}  
+
+nav a:hover,
+nav [class*=fa-]:hover {
+  color: green ;
+}
+
+@media (min-width: 1000px) {
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+
+}
+
+.offers {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.offers h1 {
+  font-size: 200%;
+  font-family: var(--text-font);
+  margin: 2rem 0;
+  padding: 0;
+  cursor: default;
+}
+
+.offers > div {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.offers > div > div {
+  background-color: #043b077a;
+  padding: 1rem;
+  border-radius: 2px ;
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap ;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.offers > div > div:hover {
+  background-color: #054d05;
+  transition: all 0.1s ease-in;
+}
+
+.offers > div > div:active {
+  background-color: #054d05b0;
+  animation: down-up 0.1s ease-in;
+}
+
+.offers > div > div > span:first-child {
+  font-size: 120%;
+  flex: 0.7;
+}
+
+.offers > div > div > span > a {
+  display: inline-block;
+  font-size: 100%;
+  font-weight: 600;
+  font-family: var(--title-font);
+  color: #000000;
+}
+
+.offers > div > div > span > a > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.offers > div > div > span > p {
+  font-size: 80%;
+  font-weight: 400;
+  font-family: var(--text-font);
+  color: white;
+}
+
+.offers > div > div > span > p,
+.offers > div > div > span > h2 {
+  cursor: default;
+}
+
+.offers > div > div > [class*=fa-] {
+  flex: 0.3;
+  font-size: 500%;
+  text-align: end;
+  color: #000000;
+}
+
+@media (min-width: 1200px) {
+  .offers {
+    max-width: 1200px ;
+    margin: 0 auto;
+  }
+  .offers > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .map {
+    grid-column: 1 / 5;
+  }
+  .culture {
+    grid-column: 1/3;
+  }
+  .cities {
+    grid-column: 3/5;
+  }
+  .meteo {
+    grid-column: 1/3;
+  }
+  .touristicPlaces {
+    grid-column: 1/5
+  }
+}
+
+@keyframes down-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center ;
+  text-align: center;
+}
+
+.footer > .con h2 {
+  font-size: 120%;
+  font-family: var(--title-font);
+  margin: 0;
+  color: #044b0a;
+  cursor: default;
+}
+
+.footer > .con > .social-medias {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer > .con > .social-medias > a {
+  color: #000000;
+  font-size: 200%;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.footer > .con > .social-medias > a:nth-child(1):hover {
+  color: #3b5998;
+}
+
+.footer > .con > .social-medias > a:nth-child(2):hover {
+  color: #55acee;
+}
+
+.footer > .con > .social-medias > a:nth-child(3):hover {
+  color: #f78400;
+}
+
+.footer > .con > .social-medias > a:nth-child(4):hover {
+  color: #061df0;
+}
+
+.footer > .con > small {
+  font-size: 100% ;
+  font-family: var(--text-font);
+  color: #000000;
+  margin: 0;
+  cursor: default;
+}
+
+.footer > .con > small > a {
+  margin: 0 0.5rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 150%;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    color: #000000a6;
+  }
+}
